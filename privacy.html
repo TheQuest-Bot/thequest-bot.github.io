@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Static page, no script, nothing loaded from elsewhere. Its text follows the app: read it again when the
+     Google access, the local files, the sync or the export change (src/shared/release.test.ts checks the scopes). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Règles de confidentialité de The Quest : données Google consultées, utilisation, stockage, partage et suppression. The Quest privacy policy.">
+<title>Règles de confidentialité · Privacy policy — The Quest</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect x='8' y='8' width='240' height='240' rx='56' fill='%2317171A'/%3E%3Cpath d='M124 52 A72 72 0 1 1 52 124' fill='none' stroke='%2393A5FB' stroke-width='26' stroke-linecap='round'/%3E%3Cpath d='M124 124 L200 200' stroke='%23FFFFFF' stroke-width='24' stroke-linecap='round'/%3E%3Ccircle cx='124' cy='124' r='20' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #F7F7F9;
+    --surface: #FFFFFF;
+    --text: #1B1B20;
+    --muted: #50505A;
+    --link: #1D4ED8;
+    --border: #DCDCE3;
+    --code-bg: #EEEEF3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121215;
+      --surface: #1C1C21;
+      --text: #EDEDF0;
+      --muted: #B7B7C2;
+      --link: #93C5FD;
+      --border: #34343C;
+      --code-bg: #26262D;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .page { max-width: 46rem; margin: 0 auto; padding: 32px 16px 48px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header svg { width: 56px; height: 56px; flex: none; }
+  .app { margin: 0; font-weight: 600; }
+  .app a { color: inherit; text-decoration: none; }
+  .app a:hover { text-decoration: underline; }
+  h1 { font-size: 1.8rem; line-height: 1.2; margin: 0; }
+  .updated { margin: 16px 0 0; color: var(--muted); }
+  nav { margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px 24px 20px; margin-top: 24px; }
+  h2 { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 20px 0 0; }
+  h3 { font-size: 1.2rem; line-height: 1.3; margin: 28px 0 8px; }
+  p, ul, dl { margin: 8px 0; }
+  li + li { margin-top: 6px; }
+  dt { font-weight: 600; margin-top: 16px; }
+  dd { margin: 4px 0 0; }
+  code {
+    font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+    font-size: 0.9em;
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+  }
+  blockquote { margin: 8px 0; padding: 4px 16px; border-left: 4px solid var(--border); }
+  footer { margin-top: 32px; color: var(--muted); font-size: 0.9rem; }
+  footer p { margin: 4px 0; }
+  @media (max-width: 480px) {
+    section { padding: 4px 16px 16px; }
+    h1 { font-size: 1.5rem; }
+    header svg { width: 48px; height: 48px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <svg viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#60A5FA"/>
+          <stop offset="1" stop-color="#C084FC"/>
+        </linearGradient>
+      </defs>
+      <rect x="8" y="8" width="240" height="240" rx="56" fill="#17171A"/>
+      <circle cx="124" cy="124" r="72" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="26"/>
+      <path d="M124 52 A72 72 0 1 1 52 124" fill="none" stroke="url(#ring)" stroke-width="26" stroke-linecap="round"/>
+      <path d="M124 124 L200 200" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+      <circle cx="124" cy="124" r="20" fill="#FFFFFF"/>
+    </svg>
+    <div>
+      <p class="app"><a href="index.html">The Quest</a></p>
+      <h1>Règles de confidentialité · <span lang="en">Privacy policy</span></h1>
+    </div>
+  </header>
+
+  <p class="updated">Dernière mise à jour : 22 novembre 2026 · <span lang="en">Last updated: 22 November 2026</span></p>
+
+  <nav aria-label="Langue et pages · Language and pages">
+    <a href="#fr">Français</a>
+    <a href="#en" lang="en">English</a>
+    <a href="index.html">Accueil · <span lang="en">Home</span></a>
+  </nav>
+
+  <main>
+    <section id="fr" lang="fr">
+      <h2>Français</h2>
+
+      <h3>En bref</h3>
+      <ul>
+        <li>The Quest est une application de bureau pour Windows. Tout ce qu'elle garde reste dans des fichiers sur votre PC.</li>
+        <li>Connecter un compte Google est facultatif. Une fois votre compte connecté, l'app lit vos agendas et n'y écrit
+        que ce que vous lui demandez.</li>
+        <li>Il n'existe aucun serveur The Quest : les éditeurs ne reçoivent aucune de vos données. Pas de publicité, pas
+        de statistiques d'usage, pas de rapport d'erreur.</li>
+        <li>Vous pouvez retirer l'accès et tout effacer à tout moment (point 5).</li>
+      </ul>
+
+      <h3>Qui est responsable</h3>
+      <p>The Quest est un projet personnel de LeftMouseBully &amp; RightMouseBully, ses éditeurs, fait pour leur usage
+      personnel. Contact : <a href="mailto:TheQuest9ToGovern1@gmail.com">TheQuest9ToGovern1@gmail.com</a>.</p>
+
+      <h3>1. Données Google consultées</h3>
+      <p>Lors de la connexion, Google vous montre les autorisations demandées. Les voici, avec ce que l'app en fait :</p>
+      <dl>
+        <dt><code>openid</code> et <code>email</code> : votre adresse e-mail</dt>
+        <dd>Connaître l'adresse du compte connecté : elle s'affiche dans les réglages, sert à reconnaître le compte et
+        est proposée quand vous vous reconnectez.</dd>
+        <dt><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code> : la liste de vos agendas, en
+        lecture seule</dt>
+        <dd>Lire le nom, la couleur et vos droits sur chaque agenda, pour que vous choisissiez ceux à afficher.</dd>
+        <dt><code>https://www.googleapis.com/auth/calendar.events</code> : vos événements, en lecture et en écriture</dt>
+        <dd>Lire les événements (titre, lieu, description, début, fin, journée entière, répétition) pour les afficher ;
+        créer, modifier ou supprimer un événement quand vous le demandez.</dd>
+        <dt><code>https://www.googleapis.com/auth/tasks</code> : Google Tasks (facultatif)</dt>
+        <dd>Lire le nom de vos listes de tâches et y ajouter une tâche quand vous le demandez. L'app ne lit pas vos
+        tâches et n'en modifie ni n'en supprime aucune.</dd>
+      </dl>
+      <p>Les invités et l'organisateur d'un événement servent uniquement à savoir si vous pouvez le modifier et s'il a
+      des invités : aucune adresse d'invité n'est conservée. Les deux autorisations d'agenda sont nécessaires : si vous
+      en décochez une sur la page de Google, l'app rend aussitôt l'accès accordé et la connexion n'a pas lieu.</p>
+
+      <h3>2. Utilisation</h3>
+      <p>Les données Google servent uniquement aux fonctions de l'app que vous utilisez :</p>
+      <ul>
+        <li>afficher vos agendas et vos événements, y compris sans Internet (dernière copie connue) ;</li>
+        <li>ajouter, modifier ou supprimer des événements et ajouter des tâches, à votre demande. Quand vous modifiez ou
+        supprimez un événement qui a des invités, Google les prévient ;</li>
+        <li>les tags d'événements : quand vous taguez un événement, l'app retient son titre exact pour taguer aussi les
+        événements de titre semblable. Ces tags restent dans l'app : rien n'est écrit dans Google ;</li>
+        <li>les statistiques et le bilan annuel (« Rewind ») : le temps des événements tagués, compté par tag et par
+        jour. Le Rewind, un fichier enregistré sur votre PC, ne contient aucun titre d'événement.</li>
+      </ul>
+      <p>Elles ne sont jamais utilisées pour de la publicité, jamais vendues, jamais utilisées pour établir un profil ni
+      pour entraîner un modèle d'intelligence artificielle. Personne ne les lit : ni les éditeurs, ni qui que ce soit
+      d'autre.</p>
+
+      <h3>3. Stockage, sur votre PC uniquement</h3>
+      <p>Dans le dossier de données de l'app, <code>%APPDATA%\The Quest</code> :</p>
+      <ul>
+        <li><code>accounts.vault</code> : le jeton qui permet à l'app de garder l'accès à votre compte (jeton de
+        renouvellement), <strong>chiffré par Windows</strong> pour votre session. Le jeton d'accès, valable une heure,
+        reste en mémoire et n'est jamais écrit.</li>
+        <li><code>calendar-cache.json</code> : une copie de vos agendas (nom, couleur) et de vos événements (titre,
+        lieu, description, heures), à partir de 12 mois avant votre première connexion, ainsi que le nom de vos listes
+        de tâches. Elle permet d'afficher l'agenda sans attendre et sans Internet ; elle est conservée tant que le
+        compte est connecté.</li>
+        <li><code>store.json</code>, vos données et réglages : l'adresse e-mail des comptes connectés ; les titres
+        exacts des événements que vous avez tagués, et ceux que vous avez refusés ; les exceptions (identifiants
+        d'événements laissés sans tag) ; les identifiants des agendas cochés dans vos widgets (l'identifiant de votre
+        agenda Google principal est votre adresse e-mail). Un titre retiré d'un tag reste noté comme « supprimé », pour
+        que la synchronisation ne le fasse pas revenir, jusqu'à ce que ce tag soit retiré en entier.</li>
+        <li><code>backups\</code> : des copies de sécurité de <code>store.json</code>, faites automatiquement par l'app.</li>
+      </ul>
+      <p>Le Rewind est enregistré dans <code>Documents\The Quest\Rewind</code>.</p>
+
+      <h3>4. Partage</h3>
+      <p>The Quest ne transmet vos données Google à personne. Elles ne quittent votre PC que dans ces cas :</p>
+      <ul>
+        <li>vers Google, pour lire et modifier vos agendas, par une connexion chiffrée (HTTPS) ;</li>
+        <li>si <strong>vous</strong> activez la synchronisation entre vos PC (désactivée par défaut) : l'app écrit un
+        fichier dans un dossier de votre PC, que le logiciel Syncthing, installé et réglé par vous, copie vers vos
+        autres PC sans passer par un serveur. Ce fichier contient les titres tagués et refusés, les exceptions et les
+        identifiants des agendas cochés ; jamais les jetons, la liste des comptes ni la copie de vos événements. Chaque
+        PC connecte lui-même son compte Google ;</li>
+        <li>si <strong>vous</strong> exportez vos données (« Exporter mes données… ») : le fichier contient les mêmes
+        éléments et est enregistré là où vous le choisissez.</li>
+      </ul>
+
+      <h3>5. Conservation et suppression</h3>
+      <ul>
+        <li><strong>Se déconnecter</strong> (Réglages généraux → Agenda → Déconnecter) : l'app demande à Google de
+        retirer son accès, puis efface le jeton et la copie des événements de ce compte. Si Google ne peut pas être
+        joint à ce moment, retirez aussi l'accès sur la page de Google indiquée plus bas.</li>
+        <li><strong>Retirer un tag</strong> d'événements (clic droit sur l'événement → « Retirer le tag ») efface ses
+        titres de vos données, et de vos autres PC à la synchronisation suivante.</li>
+        <li><strong>Tout effacer</strong> : la désinstallation garde vos données. Pour les effacer, supprimez le dossier
+        <code>%APPDATA%\The Quest</code> et, si vous les avez utilisés, le dossier de synchronisation
+        (<code>Documents\The Quest\Synchro</code> par défaut) sur chaque PC et vos fichiers exportés.</li>
+        <li><strong>Retirer l'accès chez Google</strong>, à tout moment : sur
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, choisissez The Quest
+        et retirez son accès. L'app indique alors « Connexion expirée » et n'accède plus à votre compte.</li>
+      </ul>
+      <p>Les éditeurs ne conservent aucune donnée : il n'y a rien à supprimer chez eux.</p>
+
+      <h3>6. Sécurité</h3>
+      <p>La connexion à Google se fait dans votre navigateur, selon la méthode de Google pour les applications de
+      bureau (avec PKCE) ; les échanges avec Google sont chiffrés (HTTPS) ; le jeton est chiffré par Windows ; l'app ne
+      contacte aucun autre service sur Internet.</p>
+
+      <h3>7. Règles de Google (usage limité)</h3>
+      <p>L'utilisation par The Quest des informations reçues des API Google respecte la
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" lang="en">Google API Services User Data Policy</a>
+      (les règles de Google sur les données des utilisateurs de ses API), y compris ses exigences d'usage limité
+      (<span lang="en">Limited Use</span>).</p>
+
+      <h3>8. Modifications de ces règles</h3>
+      <p>Si la façon dont The Quest utilise les données Google change, cette page est mise à jour avant ce changement,
+      avec une nouvelle date, et les utilisateurs de l'app en sont prévenus.</p>
+    </section>
+
+    <section id="en" lang="en">
+      <h2>English</h2>
+
+      <h3>In short</h3>
+      <ul>
+        <li>The Quest is a desktop app for Windows. Everything it keeps stays in files on your PC.</li>
+        <li>Connecting a Google account is optional. Once your account is connected, the app reads your calendars and
+        only writes to them what you ask it to.</li>
+        <li>There is no The Quest server: the publishers receive none of your data. No advertising, no usage
+        statistics, no error reports.</li>
+        <li>You can remove the access and erase everything at any time (section 5).</li>
+      </ul>
+
+      <h3>Who is responsible</h3>
+      <p>The Quest is a personal project by LeftMouseBully &amp; RightMouseBully, its publishers, made for their own
+      personal use. Contact: <a href="mailto:TheQuest9ToGovern1@gmail.com">TheQuest9ToGovern1@gmail.com</a>.</p>
+
+      <h3>1. Google data accessed</h3>
+      <p>When you sign in, Google shows you the permissions requested. Here they are, with what the app does with them:</p>
+      <dl>
+        <dt><code>openid</code> and <code>email</code>: your email address</dt>
+        <dd>To know the address of the connected account: it is shown in the settings, used to recognise the account
+        and suggested when you reconnect.</dd>
+        <dt><code>https://www.googleapis.com/auth/calendar.calendarlist.readonly</code>: the list of your calendars,
+        read-only</dt>
+        <dd>To read the name, colour and your rights on each calendar, so that you choose which ones to show.</dd>
+        <dt><code>https://www.googleapis.com/auth/calendar.events</code>: your events, read and write</dt>
+        <dd>To read the events (title, location, description, start, end, all-day, recurrence) to show them; to
+        create, change or delete an event when you ask it to.</dd>
+        <dt><code>https://www.googleapis.com/auth/tasks</code>: Google Tasks (optional)</dt>
+        <dd>To read the names of your task lists and add a task to one when you ask it to. The app does not read your
+        tasks and never changes or deletes any.</dd>
+      </dl>
+      <p>The guests and the organiser of an event are only used to know whether you can change it and whether it has
+      guests: no guest address is kept. Both calendar permissions are needed: if you untick one on Google's page, the
+      app immediately gives the granted access back and the sign-in does not happen.</p>
+
+      <h3>2. Use</h3>
+      <p>Google data is used only for the features of the app that you use:</p>
+      <ul>
+        <li>showing your calendars and events, also without Internet (last known copy);</li>
+        <li>adding, changing or deleting events and adding tasks, when you ask. When you change or delete an event that
+        has guests, Google lets them know;</li>
+        <li>event tags: when you tag an event, the app keeps its exact title to tag the events with a similar title
+        too. These tags stay in the app: nothing is written to Google;</li>
+        <li>statistics and the yearly review (“Rewind”): the time of tagged events, counted per tag and per day. The
+        Rewind, a file saved on your PC, contains no event title.</li>
+      </ul>
+      <p>It is never used for advertising, never sold, never used to build a profile or to train an artificial
+      intelligence model. Nobody reads it: neither the publishers nor anyone else.</p>
+
+      <h3>3. Storage, on your PC only</h3>
+      <p>In the app's data folder, <code>%APPDATA%\The Quest</code>:</p>
+      <ul>
+        <li><code>accounts.vault</code>: the token that lets the app keep access to your account (refresh token),
+        <strong>encrypted by Windows</strong> for your user session. The access token, valid for one hour, stays in
+        memory and is never written.</li>
+        <li><code>calendar-cache.json</code>: a copy of your calendars (name, colour) and events (title, location,
+        description, times), from 12 months before your first sign-in, plus the names of your task lists. It shows the
+        calendar without waiting and without Internet; it is kept while the account is connected.</li>
+        <li><code>store.json</code>, your data and settings: the email address of the connected accounts; the exact
+        titles of the events you tagged, and of those you refused; the exceptions (identifiers of events left without
+        a tag); the identifiers of the calendars ticked in your widgets (the identifier of your main Google calendar is
+        your email address). A title removed from a tag stays recorded as “deleted”, so that the sync does not bring it
+        back, until that tag is removed as a whole.</li>
+        <li><code>backups\</code>: safety copies of <code>store.json</code>, made automatically by the app.</li>
+      </ul>
+      <p>The Rewind is saved in <code>Documents\The Quest\Rewind</code>.</p>
+
+      <h3>4. Sharing</h3>
+      <p>The Quest passes your Google data to no one. It only leaves your PC in these cases:</p>
+      <ul>
+        <li>to Google, to read and change your calendars, over an encrypted connection (HTTPS);</li>
+        <li>if <strong>you</strong> turn on the sync between your PCs (off by default): the app writes a file in a
+        folder of your PC, which the Syncthing software, installed and set up by you, copies to your other PCs without
+        going through a server. This file contains the tagged and refused titles, the exceptions and the identifiers of
+        the ticked calendars; never the tokens, the list of accounts or the copy of your events. Each PC connects its
+        Google account itself;</li>
+        <li>if <strong>you</strong> export your data: the file contains the same items and is saved where you
+        choose.</li>
+      </ul>
+
+      <h3>5. Retention and deletion</h3>
+      <ul>
+        <li><strong>Disconnecting</strong> an account in the app's calendar settings: the app asks Google to remove its
+        access, then erases the token and the copy of that account's events. If Google cannot be reached at that
+        moment, also remove the access on Google's page given below.</li>
+        <li><strong>Removing an event tag</strong> erases its titles from your data, and from your other PCs at the
+        next sync.</li>
+        <li><strong>Erasing everything</strong>: uninstalling keeps your data. To erase it, delete the folder
+        <code>%APPDATA%\The Quest</code> and, if you used them, the sync folder (<code>Documents\The Quest\Synchro</code>
+        by default) on each PC and your exported files.</li>
+        <li><strong>Removing the access at Google</strong>, at any time: on
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, choose The Quest and
+        remove its access. The app then says the sign-in has expired and no longer accesses your account.</li>
+      </ul>
+      <p>The publishers keep no data: there is nothing to delete on their side.</p>
+
+      <h3>6. Security</h3>
+      <p>Signing in to Google happens in your browser, following Google's method for desktop apps (with PKCE);
+      exchanges with Google are encrypted (HTTPS); the token is encrypted by Windows; the app contacts no other service
+      on the Internet.</p>
+
+      <h3>7. Google's rules (Limited Use)</h3>
+      <blockquote><p>The Quest's use of information received from Google APIs will adhere to
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p></blockquote>
+
+      <h3>8. Changes to this policy</h3>
+      <p>If the way The Quest uses Google data changes, this page is updated before that change, with a new date, and
+      the users of the app are told.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">The Quest</a> · LeftMouseBully &amp; RightMouseBully ·
+    <a href="mailto:TheQuest9ToGovern1@gmail.com">TheQuest9ToGovern1@gmail.com</a></p>
+    <p>The Quest n'est pas affiliée à Google. · <span lang="en">The Quest is not affiliated with Google.</span></p>
+  </footer>
+</div>
+</body>
+</html>

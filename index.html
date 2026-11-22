@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Static page, no script, nothing loaded from elsewhere (SPEC §5.2, Google app published). -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="The Quest, application de bureau pour Windows qui aide à se concentrer. The Quest, a Windows desktop app to stay focused.">
+<title>The Quest</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect x='8' y='8' width='240' height='240' rx='56' fill='%2317171A'/%3E%3Cpath d='M124 52 A72 72 0 1 1 52 124' fill='none' stroke='%2393A5FB' stroke-width='26' stroke-linecap='round'/%3E%3Cpath d='M124 124 L200 200' stroke='%23FFFFFF' stroke-width='24' stroke-linecap='round'/%3E%3Ccircle cx='124' cy='124' r='20' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #F7F7F9;
+    --surface: #FFFFFF;
+    --text: #1B1B20;
+    --muted: #50505A;
+    --link: #1D4ED8;
+    --border: #DCDCE3;
+    --code-bg: #EEEEF3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121215;
+      --surface: #1C1C21;
+      --text: #EDEDF0;
+      --muted: #B7B7C2;
+      --link: #93C5FD;
+      --border: #34343C;
+      --code-bg: #26262D;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .page { max-width: 46rem; margin: 0 auto; padding: 32px 16px 48px; }
+  header { display: flex; align-items: center; gap: 16px; }
+  header svg { width: 64px; height: 64px; flex: none; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0; }
+  .tagline { margin: 4px 0 0; color: var(--muted); }
+  nav { margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; }
+  a { color: var(--link); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  section { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px 24px 20px; margin-top: 24px; }
+  h2 { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 20px 0 0; }
+  h3 { font-size: 1.2rem; line-height: 1.3; margin: 24px 0 8px; }
+  p, ul { margin: 8px 0; }
+  li + li { margin-top: 4px; }
+  .cta { display: inline-block; margin: 8px 0; padding: 10px 16px; border: 2px solid var(--link); border-radius: 8px; font-weight: 600; text-decoration: none; }
+  .cta:hover { text-decoration: underline; }
+  blockquote { margin: 8px 0; padding: 4px 16px; border-left: 4px solid var(--border); }
+  footer { margin-top: 32px; color: var(--muted); font-size: 0.9rem; }
+  footer p { margin: 4px 0; }
+  @media (max-width: 480px) {
+    section { padding: 4px 16px 16px; }
+    h1 { font-size: 1.7rem; }
+    header svg { width: 52px; height: 52px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <svg viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#60A5FA"/>
+          <stop offset="1" stop-color="#C084FC"/>
+        </linearGradient>
+      </defs>
+      <rect x="8" y="8" width="240" height="240" rx="56" fill="#17171A"/>
+      <circle cx="124" cy="124" r="72" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="26"/>
+      <path d="M124 52 A72 72 0 1 1 52 124" fill="none" stroke="url(#ring)" stroke-width="26" stroke-linecap="round"/>
+      <path d="M124 124 L200 200" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round"/>
+      <circle cx="124" cy="124" r="20" fill="#FFFFFF"/>
+    </svg>
+    <div>
+      <h1>The Quest</h1>
+      <p class="tagline">Application de concentration pour Windows · <span lang="en">A focus app for Windows</span></p>
+    </div>
+  </header>
+
+  <nav aria-label="Langue et pages · Language and pages">
+    <a href="#fr">Français</a>
+    <a href="#en" lang="en">English</a>
+    <a href="privacy.html">Règles de confidentialité · <span lang="en">Privacy policy</span></a>
+  </nav>
+
+  <main>
+    <section id="fr" lang="fr">
+      <h2>Français</h2>
+
+      <h3>Présentation</h3>
+      <p>The Quest est une application de bureau pour Windows 11 qui aide à se concentrer et à suivre son temps de
+      travail. C'est un projet personnel de LeftMouseBully &amp; RightMouseBully, fait pour leur usage personnel :
+      elle n'est pas vendue, ne contient aucune publicité et ne demande aucun compte The Quest.</p>
+
+      <h3>Ce que fait l'app</h3>
+      <ul>
+        <li>un timer de travail et de pause (méthode Pomodoro), avec des séances classées par tags ;</li>
+        <li>des statistiques et un bilan annuel, le « Rewind » ;</li>
+        <li>des écrans personnalisables avec des widgets : calendrier, page HTML locale, calculatrice ;</li>
+        <li>un mode focus qui, pendant une séance, coupe le son de certaines apps, en ferme d'autres et bloque des sites.</li>
+      </ul>
+
+      <h3>Avec Google Agenda et Google Tasks</h3>
+      <p>Connecter un compte Google est facultatif. Si vous connectez le vôtre, The Quest :</p>
+      <ul>
+        <li>affiche vos agendas Google dans un widget Calendrier (vues jour, semaine, mois et « à venir ») ;</li>
+        <li>ajoute, modifie ou supprime un événement dans vos agendas, uniquement quand vous le demandez ;</li>
+        <li>ajoute une tâche à une liste Google Tasks, uniquement quand vous le demandez ;</li>
+        <li>compte dans vos statistiques le temps des événements que vous avez tagués.</li>
+      </ul>
+      <p>Ces accès servent uniquement à ces fonctions : sans eux, l'app ne pourrait ni afficher votre agenda, ni y
+      ajouter quoi que ce soit.</p>
+
+      <h3>Vos données restent sur votre PC</h3>
+      <p>The Quest échange directement avec Google depuis votre PC. Il n'existe aucun serveur The Quest : vos données
+      Google ne sont envoyées à personne d'autre, et les éditeurs n'y ont pas accès. Tout le détail est dans les règles
+      de confidentialité.</p>
+      <p><a class="cta" href="privacy.html">Lire les règles de confidentialité</a></p>
+      <p>L'utilisation par The Quest des informations reçues des API Google respecte la
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" lang="en">Google API Services User Data Policy</a>
+      (les règles de Google sur les données des utilisateurs de ses API), y compris ses exigences d'usage limité
+      (<span lang="en">Limited Use</span>).</p>
+
+      <h3>Contact</h3>
+      <p>Éditeurs : LeftMouseBully &amp; RightMouseBully. Écrire à
+      <a href="mailto:TheQuest9ToGovern1@gmail.com">TheQuest9ToGovern1@gmail.com</a>.</p>
+    </section>
+
+    <section id="en" lang="en">
+      <h2>English</h2>
+
+      <h3>About</h3>
+      <p>The Quest is a desktop app for Windows 11 that helps you focus and keep track of your working time. It is a
+      personal project by LeftMouseBully &amp; RightMouseBully, made for their own personal use: it is not sold, shows
+      no advertising and needs no The Quest account.</p>
+
+      <h3>What the app does</h3>
+      <ul>
+        <li>a work and break timer (Pomodoro technique), with sessions sorted by tags;</li>
+        <li>statistics and a yearly review, the “Rewind”;</li>
+        <li>customisable screens with widgets: calendar, local HTML page, calculator;</li>
+        <li>a focus mode that, during a session, mutes some apps, closes others and blocks websites.</li>
+      </ul>
+
+      <h3>With Google Calendar and Google Tasks</h3>
+      <p>Connecting a Google account is optional. If you connect yours, The Quest:</p>
+      <ul>
+        <li>shows your Google calendars in a Calendar widget (day, week, month and “upcoming” views);</li>
+        <li>adds, changes or deletes an event in your calendars, only when you ask it to;</li>
+        <li>adds a task to a Google Tasks list, only when you ask it to;</li>
+        <li>counts the time of the events you have tagged in your statistics.</li>
+      </ul>
+      <p>This access is used only for these features: without it, the app could neither show your calendar nor add
+      anything to it.</p>
+
+      <h3>Your data stays on your PC</h3>
+      <p>The Quest talks to Google directly from your PC. There is no The Quest server: your Google data is sent to
+      no one else, and the publishers have no access to it. All the details are in the privacy policy.</p>
+      <p><a class="cta" href="privacy.html">Read the privacy policy</a></p>
+      <blockquote><p>The Quest's use of information received from Google APIs will adhere to
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p></blockquote>
+
+      <h3>Contact</h3>
+      <p>Publishers: LeftMouseBully &amp; RightMouseBully. Write to
+      <a href="mailto:TheQuest9ToGovern1@gmail.com">TheQuest9ToGovern1@gmail.com</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="privacy.html">Règles de confidentialité</a> · <a href="privacy.html" lang="en">Privacy policy</a></p>
+    <p>Dernière mise à jour : 22 novembre 2026 · <span lang="en">Last updated: 22 November 2026</span></p>
+    <p>The Quest n'est pas affiliée à Google. · <span lang="en">The Quest is not affiliated with Google.</span></p>
+  </footer>
+</div>
+</body>
+</html>
